@@ -1,0 +1,9 @@
+Log File
+----
+
+Author:   Connor Chase
+Date:     7/9/16
+Changes:  created the prefabs: Rock, GrassChunk, PlainDirt, and all the grassy corners/edges. Prefabs allow sprites to snap to an adjustable grid. Also created the playfield object with Walls and Center child objects.
+
+----
+
