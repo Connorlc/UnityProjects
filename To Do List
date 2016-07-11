@@ -3,30 +3,28 @@ To Do list
 
 Make game
   get/create character
-    add a circle collider to the prefab
     write script for eating npcs/being eaten
-    
+
   get/create playfield
     finish Walls and Center objects
-      add colliders to the green part of the walls (on the prefab)
       fill the playfield with gridded prefabs
       get more sprites to put in the inner playfield
-      
+
   get music
     look online?
-    
+
   power ups
     hearts increase player hp(number of unfavorable collisions it takes to lose
     stars grant temparary vulnerability
     coins give money to buy hearts and stars in the pause menu?
-    
+
   rules
     add a deviation from the original game
-    
+
   enemies
     recolor red bird sprite and create new prefabs using the colors?  OR  find another sprite to use for npcs?
     create AI script to control enemy movement
-    
+
   create menus and text based objects
     main menu
     options
