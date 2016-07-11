@@ -3,7 +3,13 @@ Log File
 
 Author:   Connor Chase
 Date:     7/9/16
-Changes:  created the prefabs: Rock, GrassChunk, PlainDirt, and all the grassy corners/edges. Prefabs allow the sprites to snap to an adjustable grid. Also created the playfield object with completed Walls and unfinished Center child-objects.
+Changes:  Created prefabs for the stage and put them in the prefabs folder. The prefabs allow the sprites to snap to an adjustable grid. Also created the playfield object and set the border for our game's stage.
+
+----
+
+Author:   Connor Chase
+Date:     7/10/16
+Changes:  Created a prefab for the player, granting up/down/left/right movement. The Sprite is animated and reflects about the Y axis when horizontal input direction changes.
 
 ----
 
