@@ -3,12 +3,12 @@ To Do list
 
 Make game
   get/create character
-    add a circle collider
+    add a circle collider to the prefab
     write script for eating npcs/being eaten
     
   get/create playfield
     finish Walls and Center objects
-      add colliders to the green part of the walls
+      add colliders to the green part of the walls (on the prefab)
       fill the playfield with gridded prefabs
       get more sprites to put in the inner playfield
       
