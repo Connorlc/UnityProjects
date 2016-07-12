@@ -8,26 +8,31 @@ Make game
   get/create playfield
     finish Walls and Center objects
       fill the playfield with gridded prefabs
-      get more sprites to put in the inner playfield
+      get more sprites to put in the inner playfield (optional)
 
   get music
-    look online?
+    look asset store?
 
-  power ups
-    hearts increase player hp(number of unfavorable collisions it takes to lose
+  power ups (optional)
+    hearts increase player hp (number of unfavorable collisions it takes to lose)
     stars grant temparary vulnerability
-    coins give money to buy hearts and stars in the pause menu?
+    coins give money to buy hearts and stars in the pause menu
+    diamonds shine bright enough to deter enemies
 
   rules
-    add a deviation from the original game
+    add a deviation from the original game (optional)
 
   enemies
-    recolor red bird sprite and create new prefabs using the colors?  OR  find another sprite to use for npcs?
+    find another sprite to use for npcs (optional)
+      add colliders
     create AI script to control enemy movement
+      move in random directions
 
   create menus and text based objects
     main menu
     options
-    victory scenario
+      controls
+      difficulty (optional)
+    victory scenario (optional)
     defeat scenario
     pause menu
