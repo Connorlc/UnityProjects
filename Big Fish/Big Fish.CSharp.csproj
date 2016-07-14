@@ -526,7 +526,6 @@
     <Compile Include="Assets\Imported_Assets\Standard Assets\Vehicles\Car\Scripts\SkidTrail.cs" />
     <Compile Include="Assets\Imported_Assets\Standard Assets\Vehicles\Car\Scripts\Suspension.cs" />
     <Compile Include="Assets\Imported_Assets\Standard Assets\Vehicles\Car\Scripts\WheelEffects.cs" />
-    <Compile Include="Assets\UniformParentChildMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Imported_Assets\2DPlatformerPro\Samples\AlienSample\Art\ArtCredits-Alien.txt" />
