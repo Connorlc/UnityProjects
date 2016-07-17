@@ -63,8 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Created_Assets\C_Sharp_Scripts\ParentChildGameObjectMovement.cs" />
-    <Compile Include="Assets\Created_Assets\C_Sharp_Scripts\PlayerCameraControl.cs" />
+    <Compile Include="Assets\Created_Assets\C_Sharp_Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Imported_Assets\2DPlatformerPro\Scripts\Animation\AnimationMapping.cs" />
     <Compile Include="Assets\Imported_Assets\2DPlatformerPro\Scripts\Animation\AnimationPauser.cs" />
     <Compile Include="Assets\Imported_Assets\2DPlatformerPro\Scripts\Animation\AnimationState.cs" />
