@@ -2,37 +2,29 @@ To Do list
 ----
 
 Make game
-  get/create character
-    write script for eating npcs/being eaten
+  find/create character
+    write script for eating shit
+    
+  find music
+    look in asset store?
 
-  get/create playfield
-    finish Walls and Center objects
-      fill the playfield with gridded prefabs
-      get more sprites to put in the inner playfield (optional)
-
-  get music
-    look asset store?
-
-  power ups (optional)
+  power ups
     hearts increase player hp (number of unfavorable collisions it takes to lose)
     stars grant temparary vulnerability
     coins give money to buy hearts and stars in the pause menu
     diamonds shine bright enough to deter enemies
 
-  rules
-    add a deviation from the original game (optional)
-
   enemies
-    find another sprite to use for npcs (optional)
-      add colliders
+    create prefabs with sprite and collider
     create AI script to control enemy movement
-      move in random directions
+      move in random directions (easy)
+      move toward player (intermediate/difficult)
 
   create menus and text based objects
     main menu
     options
       controls
-      difficulty (optional)
-    victory scenario (optional)
-    defeat scenario
+      difficulty
+    victory scenery
+    defeat scenery
     pause menu
