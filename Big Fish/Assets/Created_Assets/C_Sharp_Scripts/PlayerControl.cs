@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
 
 // NOTE: For desired movement, set player's rigidbody2d component's linear drag to 2, and gravity scale to 0.
 public class PlayerControl : MonoBehaviour
