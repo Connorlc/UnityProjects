@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     public Text[] buttonList;
+    public GameObject gameOverPanel;
+    public Text gameOverText;
 
     private string playerSide;
 
@@ -51,6 +53,9 @@ public class GameController : MonoBehaviour
         {
             buttonList[i].GetComponentInParent<Button>().interactable = false;
         }
+
+        gameOverText.text = playerSide + " Wins!";
+        gameOverPanel.SetActive(true);
     }
 
     void ChangeSides()
@@ -60,6 +65,7 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
+        gameOverPanel.SetActive(false);
         SetGameControllerReferenceOnButtons();
         playerSide = "X";
     }
