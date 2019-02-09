@@ -3,12 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
+public class Player
+{
+    public Image panel;
+    public Text text;
+}
+
+[System.Serializable]
+public class PlayerColor
+{
+    public Color panelColor;
+    public Color textColor;
+}
+
 public class GameController : MonoBehaviour
 {
     public Text[] buttonList;
     public GameObject gameOverPanel;
     public Text gameOverText;
     public GameObject restartButton;
+
+    public Player playerX;
+    public Player playerO;
+    public PlayerColor activePlayerColor;
+    public PlayerColor inactivePlayerColor;
 
     private string playerSide;
     private int moveCount;
@@ -46,14 +65,11 @@ public class GameController : MonoBehaviour
             GameOver(playerSide);
         } else if(buttonList[2].text == playerSide && buttonList[4].text == playerSide && buttonList[6].text == playerSide) {
             GameOver(playerSide);
-        }
-
-        if (moveCount >= 9)
-        {
+        } else if (moveCount >= 9) {
             GameOver("draw");
+        } else {
+            ChangeSides();
         }
-
-        ChangeSides();
     }
 
     void GameOver(string winner)
@@ -71,6 +87,14 @@ public class GameController : MonoBehaviour
     void ChangeSides()
     {
         playerSide = (playerSide == "X") ? "O" : "X";
+        if (playerSide == "X")
+        {
+            SetPlayerColors(playerX, playerO);
+        }
+        else
+        {
+            SetPlayerColors(playerO, playerX);
+        }
     }
 
     void SetGameOverText(string winner)
@@ -85,10 +109,13 @@ public class GameController : MonoBehaviour
         moveCount = 0;
         gameOverPanel.SetActive(false);
         SetBoardInteractable(true);
+
         for (int i = 0; i < buttonList.Length; i++) {
             buttonList[i].text = "";
         }
+
         restartButton.SetActive(false);
+        SetPlayerColors(playerX, playerO);
     }
 
     void SetBoardInteractable(bool toggle)
@@ -98,11 +125,20 @@ public class GameController : MonoBehaviour
         }
     }
 
+    void SetPlayerColors(Player newPlayer, Player oldPlayer)
+    {
+        newPlayer.panel.color = activePlayerColor.panelColor;
+        newPlayer.text.color = activePlayerColor.textColor;
+        oldPlayer.panel.color = inactivePlayerColor.panelColor;
+        oldPlayer.text.color = inactivePlayerColor.textColor;
+    }
+
     void Awake()
     {
         gameOverPanel.SetActive(false);
         SetGameControllerReferenceOnButtons();
         playerSide = "X";
         restartButton.SetActive(false);
+        SetPlayerColors(playerX, playerO);
     }
 }
