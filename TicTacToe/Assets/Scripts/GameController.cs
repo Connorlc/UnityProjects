@@ -8,6 +8,7 @@ public class Player
 {
     public Image panel;
     public Text text;
+    public Button button;
 }
 
 [System.Serializable]
@@ -23,6 +24,7 @@ public class GameController : MonoBehaviour
     public GameObject gameOverPanel;
     public Text gameOverText;
     public GameObject restartButton;
+    public GameObject startInfo;
 
     public Player playerX;
     public Player playerO;
@@ -76,6 +78,7 @@ public class GameController : MonoBehaviour
     {
         if (winner == "draw") {
             SetGameOverText("It's a Draw!");
+            SetPlayerColorsInactive();
         } else {
             SetGameOverText(winner + " Wins!");
         }
@@ -105,17 +108,17 @@ public class GameController : MonoBehaviour
 
     public void RestartGame()
     {
-        playerSide = "X";
         moveCount = 0;
         gameOverPanel.SetActive(false);
-        SetBoardInteractable(true);
 
         for (int i = 0; i < buttonList.Length; i++) {
             buttonList[i].text = "";
         }
 
         restartButton.SetActive(false);
-        SetPlayerColors(playerX, playerO);
+        SetPlayerButtons(true);
+        SetPlayerColorsInactive();
+        startInfo.SetActive(true);
     }
 
     void SetBoardInteractable(bool toggle)
@@ -133,12 +136,43 @@ public class GameController : MonoBehaviour
         oldPlayer.text.color = inactivePlayerColor.textColor;
     }
 
+    public void SetStartingSide(string startingSide)
+    {
+        playerSide = startingSide;
+        if (playerSide == "X") {
+            SetPlayerColors(playerX, playerO);
+        } else {
+            SetPlayerColors(playerO, playerX);
+        }
+
+        StartGame();
+    }
+
+    void StartGame()
+    {
+        SetBoardInteractable(true);
+        SetPlayerButtons(false);
+        startInfo.SetActive(false);
+    }
+
+    void SetPlayerButtons(bool toggle)
+    {
+        playerX.button.interactable = toggle;
+        playerO.button.interactable = toggle;
+    }
+
+    void SetPlayerColorsInactive()
+    {
+        playerX.panel.color = inactivePlayerColor.panelColor;
+        playerX.text.color = inactivePlayerColor.textColor;
+        playerO.panel.color = inactivePlayerColor.panelColor;
+        playerO.text.color = inactivePlayerColor.textColor;
+    }
+
     void Awake()
     {
         gameOverPanel.SetActive(false);
         SetGameControllerReferenceOnButtons();
-        playerSide = "X";
         restartButton.SetActive(false);
-        SetPlayerColors(playerX, playerO);
     }
 }
